@@ -7,6 +7,7 @@ RUN npm ci --omit=dev
 # --- Runtime Stage ---
 FROM node:20-alpine
 ENV NODE_ENV=production
+ENV PORT=22101
 WORKDIR /app
 
 # Create non-root user
@@ -16,6 +17,6 @@ COPY server.js ./server.js
 COPY public ./public
 
 USER nodeusr
-EXPOSE 8080
-HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD wget -qO- http://127.0.0.1:8080/ >/dev/null || exit 1
+EXPOSE 22101
+HEALTHCHECK --interval=30s --timeout=3s --retries=3 CMD wget -qO- http://127.0.0.1:22101/ >/dev/null || exit 1
 CMD ["node", "server.js"]
