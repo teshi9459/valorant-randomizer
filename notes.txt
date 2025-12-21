@@ -1,0 +1,8 @@
+korrekturen:
+- entferne den spzialwaffen filter
+- jegliche filter funktinoeieren nicht (wenn filter aktiv wird kein outup mehr gegeben
+- optimieren für handy layout
+- Maps nur die im normalen modus also unrated gespeilt werden können, kein the range oder aus team deathmatch
+- api abfragen bitte mit englischen namen 
+- Weapons category wird im ui EEquippableCategory::Sidearm angezigt!
+- runden generiern und alles neu button entweder  zusammenfügen oder einen entfernen (doppelte funktion)
